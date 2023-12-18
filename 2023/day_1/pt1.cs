@@ -32,11 +32,11 @@ using System.Data;
 
 namespace aoc_DayOne
 {
-   class Program
+   class pt1
    {
       public static void Main(string[] args)
       {
-         var puzzle = File.ReadAllLines("/home/slush/Dokumente/ArbeitsAufträge/Private/Aki/AdventOfCode/day_1/puzzle.txt");
+         var puzzle = File.ReadAllLines("/home/slush/Dokumente/ArbeitsAufträge/Private/AdventOfCode/2023/day_1/puzzle.txt");
          List<int> resultCache = new List<int>();
          foreach (var line in puzzle)
          {
@@ -49,6 +49,7 @@ namespace aoc_DayOne
                // Convert it to String for better transformation
                string cache = Convert.ToString(numerale);
                cache += cache;
+               resultCache.Add(Convert.ToInt32(cache));
             }
             else
             {
@@ -77,3 +78,20 @@ namespace aoc_DayOne
       }
    }
 }
+
+
+
+
+/*
+           ,ggg,                                                                       ,ggg,                         
+             dP""8I   ,dPYb,                                                             dP""8I   ,dPYb,                
+            dP   88   IP'`Yb                                                            dP   88   IP'`Yb                
+           dP    88   I8  8I                                                           dP    88   I8  8I                
+          ,8'    88   I8  8bgg,                                                       ,8'    88   I8  8bgg,             
+          d88888888   I8 dP" "8    ,gggg,gg   ,ggg,,ggg,,ggg,     ,gggg,gg            d88888888   I8 dP" "8    ,gggg,gg 
+    __   ,8"     88   I8d8bggP"   dP"  "Y8I  ,8" "8P" "8P" "8,   dP"  "Y8I      __   ,8"     88   I8d8bggP"   dP"  "Y8I 
+   dP"  ,8P      Y8   I8P' "Yb,  i8'    ,8I  I8   8I   8I   8I  i8'    ,8I     dP"  ,8P      Y8   I8P' "Yb,  i8'    ,8I 
+   Yb,_,dP       `8b,,d8    `Yb,,d8,   ,d8b,,dP   8I   8I   Yb,,d8,   ,d8b,    Yb,_,dP       `8b,,d8    `Yb,,d8,   ,d8b,
+    "Y8P"         `Y888P      Y8P"Y8888P"`Y88P'   8I   8I   `Y8P"Y8888P"`Y8     "Y8P"         `Y888P      Y8P"Y8888P"`Y8
+                                                                                                                        
+*/
